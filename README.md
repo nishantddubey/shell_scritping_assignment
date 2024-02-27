@@ -15,7 +15,7 @@ The script should change the values in the file according to the input provided.
 #!/bin/bash
 
 #Function to validate user input for component name
-```
+```bash
 validate_component() {
     local component=$(echo "$1" | tr '[:upper:]' '[:lower:]')
     case $component in
@@ -29,6 +29,7 @@ validate_component() {
 }
 ```
 # Function to validate user input for scale
+```bash
 validate_scale() {
     local scale=$(echo "$1" | tr '[:upper:]' '[:lower:]')
     case $scale in
@@ -40,8 +41,9 @@ validate_scale() {
             ;;
     esac
 }
-
+```
 # Function to validate user input for view
+```bash
 validate_view() {
     local view=$(echo "$1" | tr '[:upper:]' '[:lower:]')
     case $view in
@@ -53,8 +55,9 @@ validate_view() {
             ;;
     esac
 }
-
+```
 # Function to validate user input for count
+```bash
 validate_count() {
     local count=$1
     if [[ $count =~ ^[0-9]$ ]]; then
@@ -63,8 +66,9 @@ validate_count() {
         return 1
     fi
 }
-
+```
 # Function to update the configuration file
+```bash
 update_conf_file() {
     local view=$1
     local scale=$2
@@ -146,3 +150,4 @@ done
 
 update_conf_file "$view" "$scale" "$component" "$count"
 echo "Conf file updated successfully."
+```
