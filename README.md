@@ -12,9 +12,10 @@ Note:- vdopiasample stands for Auction & vdopiasample-bid is for Bid
 The script should change the values in the file according to the input provided. At a time only one line of the conf file should be altered.
 
 # Answer
+```bash
 #!/bin/bash
-
-#Function to validate user input for component name
+```
+# Function to validate user input for component name
 ```bash
 validate_component() {
     local component=$(echo "$1" | tr '[:upper:]' '[:lower:]')
