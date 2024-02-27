@@ -15,7 +15,7 @@ validate_component() {
 }
 ```
 # Function to validate user input for scale
-```bash
+``` bash
 validate_scale() {
     local scale=$(echo "$1" | tr '[:upper:]' '[:lower:]')
     case $scale in
