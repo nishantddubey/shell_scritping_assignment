@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Function to validate user input for component name
-```bash
 validate_component() {
     local component=$(echo "$1" | tr '[:upper:]' '[:lower:]')
     case $component in
@@ -13,9 +12,8 @@ validate_component() {
             ;;
     esac
 }
-```
+
 # Function to validate user input for scale
-``` bash
 validate_scale() {
     local scale=$(echo "$1" | tr '[:upper:]' '[:lower:]')
     case $scale in
@@ -27,9 +25,8 @@ validate_scale() {
             ;;
     esac
 }
-```
+
 # Function to validate user input for view
-```bash
 validate_view() {
     local view=$(echo "$1" | tr '[:upper:]' '[:lower:]')
     case $view in
@@ -41,9 +38,8 @@ validate_view() {
             ;;
     esac
 }
-```
+
 # Function to validate user input for count
-```bash
 validate_count() {
     local count=$1
     if [[ $count =~ ^[0-9]$ ]]; then
@@ -52,9 +48,8 @@ validate_count() {
         return 1
     fi
 }
-```
+
 # Function to update the configuration file
-```bash
 update_conf_file() {
     local view=$1
     local scale=$2
@@ -80,9 +75,8 @@ update_conf_file() {
         exit 1
     fi
 }
-```
+
 # Main script starts here
-```bash
 for ((i=1; i<=3; i++)); do
     echo "Enter Component Name [INGESTOR/JOINER/WRANGLER/VALIDATOR]: "
     read component
@@ -137,4 +131,3 @@ done
 
 update_conf_file "$view" "$scale" "$component" "$count"
 echo "Conf file updated successfully."
-```
