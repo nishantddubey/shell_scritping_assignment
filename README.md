@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Function to validate user input for component name
+```
 validate_component() {
     local component=$(echo "$1" | tr '[:upper:]' '[:lower:]')
     case $component in
@@ -12,7 +13,7 @@ validate_component() {
             ;;
     esac
 }
-
+```
 # Function to validate user input for scale
 validate_scale() {
     local scale=$(echo "$1" | tr '[:upper:]' '[:lower:]')
